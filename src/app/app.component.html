@@ -1,3 +1,75 @@
-<h1>
-  {{title}}
-</h1>
+<div class="container">
+  <h2 class="top-main-heading">
+    {{title}}
+  </h2>
+
+  <form>
+    <label class="sub-heading">Quel type de villa je choisis ?</label>
+  <div class="form-group form-inline">
+    <label for="villaSelect1" class="sub-heading">Sélectionnez &nbsp;</label>
+    <select name="villaSelect" class="form-control" id="villaSelect1" [ngModel]="selectedVillaObj" (ngModelChange)="onChangeSelectObj($event)" >
+      <option *ngFor="let villa of villas" [ngValue]="villa.id">Villa type {{villa.id}} - CHAMBRE {{villa.chambers}} - {{villa.name}} - {{villa.buying_price}} &euro;</option>
+    </select>
+  </div>
+
+  <div class="selection-wrapper">
+  <div class="selection-description" [@fadeInOut]='state' *ngIf="show"><i>Vous avez choisi la <b>VILLA TYPE {{selectedVillaObj}}</b> à <b>{{buying_price}} €</b> avec un taux d'occupation à <b>{{selectedChoice}}</b> <br/> Nous estimons le prix de la location à la nuitee à <b>{{rent_pernight}}€</b></i></div>
+  </div>
+  
+  <fieldset class="form-group">
+    <label class="sub-heading">Je Choisis mon taux d'ocupation annuel potentiel</label><br/>
+    <div class="form-check form-check-inline funkyradio">
+      <div class="funkyradio-primary">
+        <input type="radio"(change)="onAPORradioChange($event)" class="form-check-input" name="APORradio" id="radio1" value="50" [(ngModel)]="radioFlag">
+        <label for="radio1" class="form-check-label">50 % </label>
+      </div>
+    </div>
+    <div class="form-check form-check-inline funkyradio">
+      <div class="funkyradio-primary">
+        <input type="radio"(change)="onAPORradioChange($event)" class="form-check-input" name="APORradio" id="radio2" value="60" [(ngModel)]="radioFlag">
+        <label for="radio2" class="form-check-label">60 % </label>
+      </div>
+    </div>
+    <div class="form-check form-check-inline funkyradio">
+      <div class="funkyradio-primary">
+        <input type="radio"(change)="onAPORradioChange($event)" class="form-check-input" name="APORradio" id="radio3" value="70" [(ngModel)]="radioFlag">
+        <label for="radio3" class="form-check-label">70 % </label>
+      </div>
+    </div>
+  </fieldset>
+
+<div class="major-result-div" [@fadeInOut]='state' *ngIf="show">
+<div class="selected_option_info"></div>
+
+  <label class="sub-heading">Voici la simulation de votre investissement:</label><br/>
+  Mon revenu annuel brut:<span class="annual_revenue"> {{annual_revenue}}</span>
+  <br/>
+  Mon revenu mensuel brut:<span class="monthly_revenue"> {{monthly_revenue}}</span>
+  <br/>
+  Mon taux de rentabilité brut:<span class="gross_profit"> {{gross_profit}}</span>
+  <br/>
+  Amortissement brut:<span class="amortization">  {{amortization}}</span>
+
+  <div class="long_detail" *ngIf="isValid">
+    <hr>
+    Pour conclure avec un investissement de {{ buying_price }} € et un taux d'occupation de {{selectedChoice}} %, 
+    vous aurez un revenu mensuel brut de {{monthly_revenue}}. Votre villa sera ammortie apres {{amortization}} 
+    annees. Si vouz souhaitez revendre votre villa apres sa construction, sa valeur serait approximativement de {{resale_price}}€.
+    <hr>
+  </div>
+
+  <h5 class="sub-heading-normal">Les charges fixes mensuelles à titre indicatif représentent pour votre type de villa:</h5>
+  <ul>
+  <li>Femme de Ménage -<span class="maid_expense"> {{maid_expense}}</span></li>
+  <li>Electricité - <span class="electricity_expense"> {{electricity_expense}}</span></li>
+  <li>Eau potable pour vos clients - <span class="clothing_water_expense"> {{clothing_water_expense}}</span></li>
+  </ul>
+
+  <div class="social_block"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Partager cette simulation sur faccebook <br/>
+  <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> Partager cette simulation avec un ami par e-mail
+  </div>
+</div><!--major result div end-->
+
+</form>
+</div>
+

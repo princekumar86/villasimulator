@@ -1,0 +1,120 @@
+.social_block, .sub-heading{
+    color: #3fc3ac;
+    font-size: 1.3em;
+}
+.top-main-heading {
+  font-size: 1em;
+  text-align: center;
+}
+
+.sub-heading-normal{
+    font-weight: 400;
+}
+.annual_revenue, .monthly_revenue, .gross_profit, .amortization {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.maid_expense, .electricity_expense, .clothing_water_expense {
+    font-size: 1.1em;
+  font-weight: bold;
+}
+
+.selection-description {
+  text-align: center;
+  font-size: 1.3em;
+}
+
+.selection-wrapper {
+    min-height: 80px;
+}
+
+hr {
+  border:none;
+  height: 1px;
+  color: black;
+  background-color: black;
+  width: 40%;
+}
+
+.long_detail {
+  font-weight: bold;
+  font-size: 1.2em;
+  text-align: center;
+  line-height: 1.1em;
+}
+
+/* custom radio button */
+.funkyradio div {
+  clear: both;
+  overflow: hidden;
+}
+
+.funkyradio input[type="radio"]:empty{
+  display: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label{
+  position: relative;
+  line-height: 2.5em;
+  text-indent: 2.25em;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.funkyradio input[type="radio"]:empty ~ label:before{
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 2.5em;
+  background: #FFFFFF;
+    border :1px solid #696868;
+    -moz-box-shadow:    inset  0  8px 8px -8px #696868, 
+                        inset  8px 0 8px -8px #696868;
+    -webkit-box-shadow: inset  0  8px 8px -8px #696868, 
+                        inset  8px 0 8px -8px #696868;
+    box-shadow:         inset  0  8px 8px -8px #696868, 
+                        inset  8px 0 8px -8px #696868;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label{
+  color: #888;
+}
+
+.funkyradio input[type="radio"]:hover:not(:checked) ~ label:before{
+  content: 'X';
+  text-indent: .9em;
+  color: #3fc3ac;
+}
+
+.funkyradio input[type="radio"]:checked ~ label{
+  color: #777;
+}
+
+.funkyradio input[type="radio"]:checked ~ label:before{
+  content: 'X';
+  text-indent: .9em;
+  color: #333;
+  background-color: #ccc;
+}
+
+.funkyradio input[type="radio"]:focus ~ label:before{
+  box-shadow: 0 0 0 3px #999;
+}
+
+.funkyradio-primary input[type="radio"]:checked ~ label:before{
+  color: #fff;
+  background-color: #3fc3ac;
+}
+
+.funkyradio-info input[type="radio"]:checked ~ label:before{
+  color: #fff;
+  background-color: #5bc0de;
+}
+
