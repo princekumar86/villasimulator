@@ -8,7 +8,7 @@
     <label class="sub-heading">Quel type de villa je choisis ?</label>
     <select name="villaSelect" class="form-control" id="villaSelect1" [(ngModel)]="selectedVillaObj" (ngModelChange)="onChangeSelectObj($event)" >
       <option [value]="0" [selected]="selectedVillaObj == 0">Sélectionnez</option>
-      <option *ngFor="let villa of villas" [ngValue]="villa.id">Villa {{villa.name}} {{villa.surface_house}} M2- {{villa.chambers}} CHAMBRE<span *ngIf="villa.chambers!=1">S</span> - Terrain {{villa.surface_land}} Ares - {{villa.buying_price}} &euro; </option>
+      <option *ngFor="let villa of villas" [ngValue]="villa.id">Villa {{villa.name}} {{villa.surface_house}} M²- {{villa.chambers}} CHAMBRE<span *ngIf="villa.chambers!=1">S</span> - Terrain {{villa.surface_land}} ares - {{villa.buying_price}} &euro; </option>
     </select>
   </div>
 
@@ -53,20 +53,21 @@
   <div class="long_detail" *ngIf="isValid">
     <hr>
     Pour conclure avec un investissement de {{ buying_price }} € et un taux d'occupation de {{selectedChoice}} %, 
-    vous aurez un revenu mensuel brut de {{monthly_revenue}}. Votre villa sera ammortie apres {{amortization}} 
-    annees. Si vouz souhaitez revendre votre villa apres sa construction, sa valeur serait approximativement de {{resale_price}} €.
+    vous aurez un revenu mensuel brut de {{monthly_revenue}}. Votre villa sera ammortie après {{amortization}}.
+     Si vouz souhaitez revendre votre villa après sa construction, sa valeur serait approximativement de {{resale_price}} €.
     <hr>
   </div>
 
   <h5 class="sub-heading-normal">Les charges fixes mensuelles à titre indicatif représentent pour votre type de villa:</h5>
   <ul>
-  <li>Femme de Ménage -<span class="maid_expense"> {{maid_expense}}</span></li>
-  <li>Electricité - <span class="electricity_expense"> {{electricity_expense}}</span></li>
-  <li>Eau potable pour vos clients - <span class="clothing_water_expense"> {{clothing_water_expense}}</span></li>
+  <li>Femme de Ménage -<span class="maid_expense"> {{maid_expense}} €</span></li>
+  <li>Electricité - <span class="electricity_expense"> {{electricity_expense}} €</span></li>
+  <li>Eau potable pour vos clients - <span class="clothing_water_expense"> {{clothing_water_expense}} €</span></li>
   </ul>
 
-  <div class="social_block"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Partager cette simulation sur Facebook <br/>
-  <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> Partager cette simulation avec un ami par e-mail
+  <div class="social_block">
+    <a href="#"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> &nbsp;Partager cette simulation sur Facebook</a> <br/>
+    <a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> Partager cette simulation avec un ami par e-mail</a>
   </div>
 </div><!--major result div end-->
 
