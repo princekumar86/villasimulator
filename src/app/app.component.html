@@ -4,20 +4,20 @@
   </h2>
 
   <form>
+  <div class="form-group">
     <label class="sub-heading">Quel type de villa je choisis ?</label>
-  <div class="form-group form-inline">
-    <label for="villaSelect1" class="sub-heading">Sélectionnez &nbsp;</label>
-    <select name="villaSelect" class="form-control" id="villaSelect1" [ngModel]="selectedVillaObj" (ngModelChange)="onChangeSelectObj($event)" >
-      <option *ngFor="let villa of villas" [ngValue]="villa.id">Villa type {{villa.id}} - CHAMBRE {{villa.chambers}} - {{villa.name}} - {{villa.buying_price}} &euro;</option>
+    <select name="villaSelect" class="form-control" id="villaSelect1" [(ngModel)]="selectedVillaObj" (ngModelChange)="onChangeSelectObj($event)" >
+      <option [value]="0" [selected]="selectedVillaObj == 0">Sélectionnez</option>
+      <option *ngFor="let villa of villas" [ngValue]="villa.id">Villa {{villa.name}} {{villa.surface_house}} M2- {{villa.chambers}} CHAMBRE<span *ngIf="villa.chambers!=1">S</span> - Terrain {{villa.surface_land}} Ares - {{villa.buying_price}} &euro; </option>
     </select>
   </div>
 
   <div class="selection-wrapper">
-  <div class="selection-description" [@fadeInOut]='state' *ngIf="show"><i>Vous avez choisi la <b>VILLA TYPE {{selectedVillaObj}}</b> à <b>{{buying_price}} €</b> avec un taux d'occupation à <b>{{selectedChoice}}</b> <br/> Nous estimons le prix de la location à la nuitee à <b>{{rent_pernight}}€</b></i></div>
+  <div class="selection-description" [@fadeInOut]='state' *ngIf="show"><i>Vous avez choisi la <b>VILLA TYPE {{selectedVillaObj}}</b> à <b>{{buying_price}} €</b> avec un taux d'occupation à <b>{{selectedChoice}} %.</b> <br/> Nous estimons le prix de la location à la nuitée à <b>{{rent_pernight}} €</b></i></div>
   </div>
   
   <fieldset class="form-group">
-    <label class="sub-heading">Je Choisis mon taux d'ocupation annuel potentiel</label><br/>
+    <label class="sub-heading">Je choisis mon taux d'ocupation annuel potentiel</label><br/>
     <div class="form-check form-check-inline funkyradio">
       <div class="funkyradio-primary">
         <input type="radio"(change)="onAPORradioChange($event)" class="form-check-input" name="APORradio" id="radio1" value="50" [(ngModel)]="radioFlag">
@@ -54,7 +54,7 @@
     <hr>
     Pour conclure avec un investissement de {{ buying_price }} € et un taux d'occupation de {{selectedChoice}} %, 
     vous aurez un revenu mensuel brut de {{monthly_revenue}}. Votre villa sera ammortie apres {{amortization}} 
-    annees. Si vouz souhaitez revendre votre villa apres sa construction, sa valeur serait approximativement de {{resale_price}}€.
+    annees. Si vouz souhaitez revendre votre villa apres sa construction, sa valeur serait approximativement de {{resale_price}} €.
     <hr>
   </div>
 
@@ -65,7 +65,7 @@
   <li>Eau potable pour vos clients - <span class="clothing_water_expense"> {{clothing_water_expense}}</span></li>
   </ul>
 
-  <div class="social_block"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Partager cette simulation sur faccebook <br/>
+  <div class="social_block"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> Partager cette simulation sur Facebook <br/>
   <i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> Partager cette simulation avec un ami par e-mail
   </div>
 </div><!--major result div end-->
