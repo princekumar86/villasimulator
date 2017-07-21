@@ -92,7 +92,6 @@ const CHOICES: Choice[] = [
   ]
 })
 export class AppComponent {
-  title = 'TABLEAU MAISON';
   villas = VILLAS;
   selectedVillaObj = 0;
   selectedChoice = 0;
@@ -149,7 +148,7 @@ export class AppComponent {
               // based on radio button choices made
               this.annual_revenue= String(i.revenue_annual)+" €";
               this.monthly_revenue= String(i.revenue_monthly)+" €";
-              this.gross_profit= String(i.rateofprofit)+" €";
+              this.gross_profit= String(i.rateofprofit)+" %";
               this.amortization=String(i.amortization)+" ans";
               this.isValid = 1;
               this.animateTopDescription();

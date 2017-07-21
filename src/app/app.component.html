@@ -1,14 +1,10 @@
 <div class="container">
-  <h2 class="top-main-heading">
-    {{title}}
-  </h2>
-
   <form>
   <div class="form-group">
     <label class="sub-heading">Quel type de villa je choisis ?</label>
     <select name="villaSelect" class="form-control" id="villaSelect1" [(ngModel)]="selectedVillaObj" (ngModelChange)="onChangeSelectObj($event)" >
       <option [value]="0" [selected]="selectedVillaObj == 0">Sélectionnez</option>
-      <option *ngFor="let villa of villas" [ngValue]="villa.id">Villa {{villa.name}} {{villa.surface_house}} M²- {{villa.chambers}} CHAMBRE<span *ngIf="villa.chambers!=1">S</span> - Terrain {{villa.surface_land}} ares - {{villa.buying_price}} &euro; </option>
+      <option *ngFor="let villa of villas" [ngValue]="villa.id">Villa {{villa.name}} {{villa.surface_house}} M² - {{villa.chambers}} CHAMBRE<span *ngIf="villa.chambers!=1">S</span> - Terrain {{villa.surface_land}} ares - {{villa.buying_price}} &euro; </option>
     </select>
   </div>
 
