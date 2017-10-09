@@ -9,11 +9,11 @@
   </div>
 
   <div class="selection-wrapper">
-  <div class="selection-description" [@fadeInOut]='state' *ngIf="show"><i>Vous avez choisi la <b>VILLA TYPE {{selectedVillaObj}}</b> à <b>{{buying_price}} €</b> avec un taux d'occupation à <b>{{selectedChoice}} %.</b> <br/> Nous estimons le prix de la location à la nuitée à <b>{{rent_pernight}} €</b></i></div>
+  <div class="selection-description" [@fadeInOut]='state' *ngIf="show"><i>Vous avez choisi la <b>VILLA TYPE {{selectedVillaObj}}</b> à <b>{{buying_price}} €</b> avec un taux d'occupation de <b>{{selectedChoice}} %.</b> <br/> Nous estimons le prix de la location à la nuitée à <b>{{rent_pernight}} €</b></i></div>
   </div>
   
   <fieldset class="form-group">
-    <label class="sub-heading">Je choisis mon taux d'occupation annuel potentiel</label><br/>
+    <label class="sub-heading">Je choisis mon taux d'occupation annuel potentiel :</label><br/>
     <div class="form-check form-check-inline funkyradio">
       <div class="funkyradio-primary">
         <input type="radio"(change)="onAPORradioChange($event)" class="form-check-input" name="APORradio" id="radio1" value="50" [(ngModel)]="radioFlag">
@@ -37,14 +37,14 @@
 <div class="major-result-div" [@fadeInOut]='state' *ngIf="show">
 <div class="selected_option_info"></div>
 
-  <label class="sub-heading">Voici la simulation de votre investissement:</label><br/>
-  Mon revenu annuel brut:<span class="annual_revenue"> {{annual_revenue}}</span>
+  <label class="sub-heading">Voici la simulation de votre investissement :</label><br/>
+  Mon revenu annuel brut :<span class="annual_revenue"> {{annual_revenue}}</span>
   <br/>
-  Mon revenu mensuel brut:<span class="monthly_revenue"> {{monthly_revenue}}</span>
+  Mon revenu mensuel brut :<span class="monthly_revenue"> {{monthly_revenue}}</span>
   <br/>
-  Mon taux de rentabilité brut:<span class="gross_profit"> {{gross_profit}}</span>
+  Mon taux de rentabilité brut :<span class="gross_profit"> {{gross_profit}}</span>
   <br/>
-  Amortissement brut:<span class="amortization">  {{amortization}}</span>
+  Amortissement brut :<span class="amortization">  {{amortization}}</span>
 
   <div class="long_detail" *ngIf="isValid">
     <hr>
@@ -54,17 +54,17 @@
     <hr>
   </div>
 
-  <h5 class="sub-heading-normal">Les charges fixes mensuelles à titre indicatif représentent pour votre type de villa:</h5>
+  <h5 class="sub-heading-normal">Les charges fixes mensuelles à titre indicatif représentent pour votre type de villa :</h5>
   <ul>
   <li>Femme de Ménage -<span class="maid_expense"> {{maid_expense}} €</span></li>
   <li>Electricité - <span class="electricity_expense"> {{electricity_expense}} €</span></li>
   <li>Eau potable pour vos clients - <span class="clothing_water_expense"> {{clothing_water_expense}} €</span></li>
   </ul>
 
-  <div class="social_block">
+  <!--<div class="social_block">
     <a href="#"><i class="fa fa-facebook-square fa-lg" aria-hidden="true"></i> &nbsp;Partager cette simulation sur Facebook</a> <br/>
     <a href="#"><i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i> Partager cette simulation avec un ami par e-mail</a>
-  </div>
+  </div>-->
 </div><!--major result div end-->
 
 </form>

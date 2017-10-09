@@ -34,9 +34,9 @@ const VILLAS: Villa[] = [
   { id: 6, chambers: 4, surface_land: 6, surface_house: 180, rent_pernight: 200, name: 'KODOK', maid: 100, electricity: 120, clothing_water: 140, buying_price: "180.000", resale_price: "270.000", description: '' },
   { id: 7, chambers: 5, surface_land: 7, surface_house: 213.5, rent_pernight: 260, name: 'LOTUS', maid: 200, electricity: 150, clothing_water: 50, buying_price: "213.500", resale_price: "320.250", description: '' },
   { id: 8, chambers: 6, surface_land: 7, surface_house: 260.5, rent_pernight: 350, name: 'FRANGIPANI', maid: 300, electricity: 180, clothing_water: 60, buying_price: "260.500", resale_price: "390.750", description: '' },
-  { id: 9, chambers: 6, surface_land: 8.74, surface_house: 285, rent_pernight: 400, name: 'ORCHIDE', maid: 300, electricity: 180, clothing_water: 60, buying_price: "285.000", resale_price: "427.500", description: '' }
-  /* ,{ id: 10, chambers: 6, surface_land: 15, surface_house: 300, rent_pernight: 500, name: 'JUJUNG', maid: 300, electricity: 180, clothing_water: 60, buying_price: "365.000", resale_price: "547.500", description: '' },
-  { id: 11, chambers: 8, surface_land: 8.7, surface_house: 500, rent_pernight: 600, name: 'TIRTA', maid: 400, electricity: 240, clothing_water: 80, buying_price: "500.000", resale_price: "750.000", description: '' }*/
+  { id: 9, chambers: 6, surface_land: 8.74, surface_house: 285, rent_pernight: 400, name: 'ORCHIDE', maid: 300, electricity: 180, clothing_water: 60, buying_price: "285.000", resale_price: "427.500", description: '' },
+  { id: 10, chambers: 6, surface_land: 15, surface_house: 300, rent_pernight: 500, name: 'JUJUNG', maid: 300, electricity: 180, clothing_water: 60, buying_price: "365.000", resale_price: "547.500", description: '' }
+  /* ,{ id: 11, chambers: 8, surface_land: 8.7, surface_house: 500, rent_pernight: 600, name: 'TIRTA', maid: 400, electricity: 240, clothing_water: 80, buying_price: "500.000", resale_price: "750.000", description: '' }*/
 ]
 
 const CHOICES: Choice[] = [
@@ -66,11 +66,11 @@ const CHOICES: Choice[] = [
   { choice_AOPR: "8-70", AOPR: 70, villa_id: 8, revenue_annual: "89.425", revenue_monthly: "7.452", rateofprofit: 34, amortization: 3.4},
   { choice_AOPR: "9-50", AOPR: 50, villa_id: 9, revenue_annual: "73.000", revenue_monthly: "6.083", rateofprofit: 26, amortization: 4},
   { choice_AOPR: "9-60", AOPR: 60, villa_id: 9, revenue_annual: "87.600", revenue_monthly: "7.300", rateofprofit: 31, amortization: 3.2},
-  { choice_AOPR: "9-70", AOPR: 70, villa_id: 9, revenue_annual: "102.200", revenue_monthly: "5.817", rateofprofit: 36, amortization: 2.8}
-  /* ,{ choice_AOPR: "10-50", AOPR: 50, villa_id: 10, revenue_annual: "91.650", revenue_monthly: "7.604", rateofprofit: 25, amortization: 4},
+  { choice_AOPR: "9-70", AOPR: 70, villa_id: 9, revenue_annual: "102.200", revenue_monthly: "5.817", rateofprofit: 36, amortization: 2.8},
+  { choice_AOPR: "10-50", AOPR: 50, villa_id: 10, revenue_annual: "91.650", revenue_monthly: "7.604", rateofprofit: 25, amortization: 4},
   { choice_AOPR: "10-60", AOPR: 60, villa_id: 10, revenue_annual: "109.500", revenue_monthly: "9.125", rateofprofit: 30, amortization: 3.5},
-  { choice_AOPR: "10-70", AOPR: 70, villa_id: 10, revenue_annual: "127.750", revenue_monthly: "10.645", rateofprofit: 35, amortization: 3},
-  { choice_AOPR: "11-50", AOPR: 50, villa_id: 11, revenue_annual: "109.500", revenue_monthly: "9.125", rateofprofit: 22, amortization: 4.6},
+  { choice_AOPR: "10-70", AOPR: 70, villa_id: 10, revenue_annual: "127.750", revenue_monthly: "10.645", rateofprofit: 35, amortization: 3}
+  /* ,{ choice_AOPR: "11-50", AOPR: 50, villa_id: 11, revenue_annual: "109.500", revenue_monthly: "9.125", rateofprofit: 22, amortization: 4.6},
   { choice_AOPR: "11-60", AOPR: 60, villa_id: 11, revenue_annual: "131.400", revenue_monthly: "10.950", rateofprofit: 26, amortization: 3.8},
   { choice_AOPR: "11-70", AOPR: 70, villa_id: 11, revenue_annual: "153.300", revenue_monthly: "12.775", rateofprofit: 31, amortization: 3.3}*/
 ]
